@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/SocialNetwork.css")" rel="stylesheet" type="text/css" />
+    <Link href="@Url.Content("~/Content/Home.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.5.3.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="page_layout" >
+
+        <div id="header">
+
+            <div class="LogButtons">
+                @if(User.Identity.IsAuthenticated)
+                {
+                    @Html.RouteLink("Log Out",new {controller = "Account", action = "LogOut"}, new {@class = "Button"})
+                }
+                else
+                {
+                    if (@Url.RequestContext.RouteData.Values["action"] != "SignUp")
+                    {
+                        @Html.RouteLink("Sing Up",new {controller = "Account", action = "SignUp"}, new {@class = "Button"})
+                    }
+                    else
+                    {
+                        @Html.RouteLink("Log In",new {controller = "Account", action = "LogIn"}, new {@class = "Button"})
+                    }
+                }
+            </div>
+
+            <div class="title">SocialNetwork</div>
+
+        </div>
+
+        <div id="Menu">
+            @{ Html.RenderAction("Menu", "Menu"); }
+        </div>
+
+        <div id="content">
+            @RenderBody()
+        </div>
+
+    </div>
+</body>
+</html>
+
+

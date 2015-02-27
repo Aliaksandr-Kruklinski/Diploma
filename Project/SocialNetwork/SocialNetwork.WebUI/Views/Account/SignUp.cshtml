@@ -1,0 +1,15 @@
+﻿@model SocialNetwork.WebUI.Models.SignUpModel
+
+@{
+    ViewBag.Title = "Sign Up";
+}
+
+<h2>Create a New Account</h2>
+<p>Use the form below to create a new account</p>
+
+@using(Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <br />
+    <input class="Button" type="image" value="Register"/>
+}

@@ -1,0 +1,80 @@
+﻿@model SocialNetwork.WebUI.Models.HomeModel
+
+@{
+    if (Model.Info.Surname != null)
+    {
+        ViewBag.Title = Model.Info.Surname;
+    }
+    else
+    {
+        ViewBag.Title = "Surname";
+    }
+
+    if (Model.Info.Name != null)
+    {
+        ViewBag.Title += " " + Model.Info.Name;
+    }
+    else
+    {
+        ViewBag.Title += " " + "Name";
+    }
+}
+
+<div id ="Home"> 
+
+    <div id ="UserName"> 
+        @if (Model.Info.Surname != null)
+        {
+            <a class ="Surname">@Model.Info.Surname</a>
+        }
+        else
+        {
+             <a class ="Surname">Surname</a>
+        }
+    
+        @if (Model.Info.Name != null)
+        {
+            <a class ="Name">@Model.Info.Name</a>
+        }
+        else
+        {
+            <a class ="Name">Name</a>
+        }
+        <br />
+        @if (Model.Info.Birthday.Year > DateTime.Now.Year - 150)
+        {
+            <a class ="Birthday">Birthday: @Model.Info.Birthday.ToString("dd.mm.yyyy")</a>
+        }
+        else
+        {
+            <a class ="Birthday">Birthday: dd:mm:yyyy</a>
+        }
+        <br />
+        <br />
+    </div>
+        
+    <div id ="Message"> 
+      @{ 
+            Html.RenderAction(
+                 "List", 
+                 "Message", 
+                 new 
+                 { 
+                     controllerName = "Home",
+                     dialogID = @Membership.GetUser(User.Identity.Name)==null ? -1 : @Membership.GetUser(User.Identity.Name).ProviderUserKey, 
+                     page = ViewBag.SelectedPage 
+                 }
+            );
+    }
+    @using (Html.BeginForm()) 
+    {
+        @Html.EditorFor(m => m.MessageText)
+        <input type="submit" value="Отправить" />
+    }
+    </div>
+
+    <div id ="Avatar"> 
+        <img class="Avatar" src="@Url.Action("GetAvatar", "Home")" />
+    </div>
+
+</div>

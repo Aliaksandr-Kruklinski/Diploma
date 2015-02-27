@@ -1,0 +1,16 @@
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\obj\Debug\SocialNetwork.UnitTests.csprojResolveAssemblyReference.cache
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.UnitTests.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.UnitTests.pdb
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\Moq.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\Ninject.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.Domain.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.WebUI.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\EntityFramework.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.Domain.pdb
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\SocialNetwork.WebUI.pdb
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\Moq.xml
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\Ninject.pdb
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\Ninject.xml
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\bin\Debug\EntityFramework.xml
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\obj\Debug\SocialNetwork.UnitTests.dll
+F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.UnitTests\obj\Debug\SocialNetwork.UnitTests.pdb

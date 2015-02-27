@@ -1,0 +1,72 @@
+﻿@model SocialNetwork.WebUI.Models.UserInfo
+
+@{
+    if (Model.Surname != null)
+    {
+        ViewBag.Title = Model.Surname;
+    }
+    else
+    {
+        ViewBag.Title = "Surname";
+    }
+
+    if (Model.Name != null)
+    {
+        ViewBag.Title += " " + Model.Name;
+    }
+    else
+    {
+        ViewBag.Title += " " + "Name";
+    }
+}
+
+@using (Html.BeginForm("Index", "Option", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+{
+     <div id ="UserName"> 
+         @if(Model.Surname != null)
+         {
+            @Html.EditorFor(m => m.Surname)
+         }
+         else
+         {
+             @Html.EditorFor(m => m.Surname,new {value = "Surname"})
+         }
+
+         @if(Model.Name != null)
+         {
+            @Html.EditorFor(m => m.Name)
+         }
+         else
+         {
+             @Html.EditorFor(m => m.Name, new { value = "Name" })
+         }
+        <br />
+        @if (Model.Birthday.Year > DateTime.Now.Year - 150)
+        {
+            @Html.TextBoxFor(m => m.Birthday,new {value = @Model.Birthday.ToString("dd.mm.yyyy"),@class ="Birthday"})
+        }
+        else
+        {
+            @Html.TextBoxFor(m => m.Birthday,new {value = "dd.mm.yyyy",@class ="Birthday"})
+        }
+    </div>
+    
+    <div id ="Message"> 
+         @if(Model.PageSize != 0)
+         {
+            @Html.LabelFor(m=> m.PageSize)
+            @Html.EditorFor(m => m.PageSize)
+         }
+         else
+         {
+             @Html.EditorFor(m => m.PageSize,new {value = "10"})
+         }
+    </div>
+            
+    <div id="AvatarEditor">
+        <a>Avatar: </a>
+        <img src="@Url.Action("GetAvatar", "Home")" />
+        <input type="file" name="Image" />
+    </div>
+    <input type="submit" value="Save" />
+}
