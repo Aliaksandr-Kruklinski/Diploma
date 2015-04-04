@@ -1,0 +1,14 @@
+﻿@model SocialNetwork.WebUI.Models.MessagePagingModel
+
+@{    
+    ViewBag.Title = "Messages";
+}
+
+@foreach (var m in Model.Messages)
+{
+    Html.RenderPartial("Message", m);
+}
+<div class="PageLinks">
+    @Html.PageLinks(Model.Paginglnfo, x => Url.Action("Index",Model.Paginglnfo.ControllerName, new {page = x}))
+</div>
+

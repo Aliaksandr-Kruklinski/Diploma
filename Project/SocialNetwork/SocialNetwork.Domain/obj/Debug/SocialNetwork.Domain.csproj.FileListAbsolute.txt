@@ -8,3 +8,13 @@ F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.Domain\bin\Debug
 F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.xml
 F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.SqlServer.xml
 F:\Workspase\Microsoft\MVC\Projects\SocialNetwork\SocialNetwork.Domain\obj\Debug\SocialNetwork.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\SocialNetwork.Domain.dll.config
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\SocialNetwork.Domain.dll
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\SocialNetwork.Domain.pdb
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\obj\Debug\SocialNetwork.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\obj\Debug\SocialNetwork.Domain.dll
+C:\Users\Александр\Desktop\Diploma\Project\SocialNetwork\SocialNetwork.Domain\obj\Debug\SocialNetwork.Domain.pdb

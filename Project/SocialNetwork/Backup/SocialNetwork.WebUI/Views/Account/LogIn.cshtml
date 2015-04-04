@@ -1,0 +1,14 @@
+﻿@model SocialNetwork.WebUI.Models.LogInModel
+
+@{
+    ViewBag.Title = "Log In";
+}
+
+<h1>Log In</h1>
+<p>Please log in:</p>
+@using(Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    @Html.EditorForModel()
+    <br />
+    <input class="Button" type="image" value="Log In"/>
+}

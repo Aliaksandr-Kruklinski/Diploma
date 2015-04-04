@@ -1,0 +1,46 @@
+﻿body {
+}
+
+DIV#Home {
+}
+
+DIV#Avatar {
+    height: 350px;
+    width: 250px;
+    background-color: #6495ED;
+}
+    DIV#Avatar img.Avatar {
+        height: 350px;
+        width: 250px;
+    }
+
+DIV#AvatarEditor {
+
+}
+    DIV#AvatarEditor img{
+        height: 350px;
+        width: 250px;
+    }
+
+DIV#UserName {
+    float: right;
+    width: 380px;
+}
+    DIV#UserName A {
+        font-size: 2em;
+    }
+        DIV#UserName A.Birthday {
+            font-size: .85em;
+            text-align: left;
+        }
+        DIV#UserName INPUT.Birthday {
+            font-size: .85em;
+            text-align: left;
+            
+        }
+
+DIV#Message {
+    float: right;
+    width: 380px;
+    height: auto;
+}

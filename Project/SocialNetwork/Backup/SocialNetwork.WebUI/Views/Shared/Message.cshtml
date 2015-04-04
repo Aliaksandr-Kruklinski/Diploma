@@ -1,0 +1,11 @@
+﻿@model SocialNetwork.Domain.Entities.Message
+
+<div class="Message">
+    <div class ="SenderIcon">
+        <img style="width:75px; height:75px " src="@Url.Action("GetAvatar", "Image", new { userID =@Model.UserID })" />
+    </div>
+    <div class ="SenderName"></div>
+    <div class ="SendDay">@Model.Time.ToString("dd.MM.yy")</div>
+    <div class ="SendTime">@Model.Time.ToString("HH:mm:ss")</div>
+    <div class ="Text">@Model.Text</div>
+</div>
