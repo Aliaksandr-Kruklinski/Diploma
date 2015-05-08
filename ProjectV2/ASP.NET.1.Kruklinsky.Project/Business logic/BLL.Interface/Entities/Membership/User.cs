@@ -15,6 +15,7 @@ namespace BLL.Interface.Entities
         public DateTime CreateDate { get; set; }
 
         public IEnumerable<Role> Roles { get; set; }
+        public IEnumerable<Image> Images { get; set; }
         public Profile Profile { get; set; }
     }
 }

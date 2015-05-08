@@ -38,6 +38,7 @@ namespace MvcUI
             bundles.Add(new StyleBundle("~/Content/home/css").Include("~/Content/home/home.css"));
             bundles.Add(new StyleBundle("~/Content/result/css").Include("~/Content/result/result.css"));
             bundles.Add(new StyleBundle("~/Content/admin/css").Include("~/Content/admin/admin.css"));
+            bundles.Add(new StyleBundle("~/Content/menu/css").Include("~/Content/menu/menu.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

@@ -1,4 +1,4 @@
-﻿using BLL.Interface.Entities;
+﻿using MvcUI.Models.Membership;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace MvcUI.Models
 {
-    //public static class MembershipMap
-    //{
+    public static class MembershipMap
+    {
     //    public static DAL.Interface.Entities.User ToDal (this User item, string password)
     //    {
     //        return new DAL.Interface.Entities.User
@@ -73,5 +73,16 @@ namespace MvcUI.Models
     //            Birthday = item.Birthday
     //        };
     //    }
-    //}
+    
+
+        public static Profile ToWeb (this System.Web.Profile.ProfileBase item)
+        {
+            return new Profile
+            {
+                FirstName = item["FirstName"] == null ? "" : (string)item["FirstName"],
+                SecondName = item["SecondName"] == null ? "" : (string)item["SecondName"],
+                Birthday = item["Birthday"] == null ? new DateTime() : (DateTime)item["Birthday"]
+            };
+        }
+    }
 }

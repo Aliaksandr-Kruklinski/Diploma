@@ -45,6 +45,7 @@
     <Compile Include="Abstract\ISubjectRepository.cs" />
     <Compile Include="Abstract\ITestRepository.cs" />
     <Compile Include="Abstract\IUserRepository.cs" />
+    <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\Knowledge\Answer.cs" />
     <Compile Include="Entities\Knowledge\Fake.cs" />
     <Compile Include="Entities\Knowledge\Question.cs" />

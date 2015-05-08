@@ -7,5 +7,12 @@ namespace MvcUI.Providers.Entities
 {
     public class Profile
     {
+        public string FirstName { get; set; }
+
+        public string SecondName { get; set; }
+
+        public DateTime? Birthday { get; set; }
+
+        public Image Avatar { get; set; }
     }
 }

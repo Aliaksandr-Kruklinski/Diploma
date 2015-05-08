@@ -142,6 +142,9 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\OptionsController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\VerifyController.cs" />
     <Compile Include="Filters\Log4netHandleErrorAttribute.cs" />
@@ -169,6 +172,8 @@
     <Compile Include="Models\Mapping\KnowledgeMap.cs" />
     <Compile Include="Models\Mapping\MembershipMap.cs" />
     <Compile Include="Models\Mapping\TestMap.cs" />
+    <Compile Include="Models\Membership\Profile.cs" />
+    <Compile Include="Models\Menu.cs" />
     <Compile Include="Models\Results.cs" />
     <Compile Include="Models\Test\Result.cs" />
     <Compile Include="Models\Test\UserAnswer.cs" />
@@ -177,6 +182,7 @@
     <Compile Include="Providers\Abstract\IVerifyProvider.cs" />
     <Compile Include="Providers\Concrete\EmailVerifyProvider.cs" />
     <Compile Include="Providers\Concrete\FormsAuthProvider.cs" />
+    <Compile Include="Providers\Entities\Image.cs" />
     <Compile Include="Providers\Entities\Profile.cs" />
     <Compile Include="Providers\Entities\Role.cs" />
     <Compile Include="Providers\Entities\User.cs" />
@@ -204,6 +210,7 @@
     <Content Include="Content\home\images\background.jpg" />
     <Content Include="Content\login\images\background.jpg" />
     <Content Include="Content\login\login.css" />
+    <Content Include="Content\menu\menu.css" />
     <Content Include="Content\result\images\background.jpg" />
     <Content Include="Content\result\result.css" />
     <Content Include="Content\signup\images\background.jpg" />
@@ -303,7 +310,7 @@
     <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Account\SignUp.cshtml" />
     <Content Include="Views\Verify\Index.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\EditTest.cshtml" />
     <Content Include="Views\Admin\AddQuestion.cshtml" />
@@ -315,13 +322,16 @@
     <Content Include="Views\Admin\AddTest.cshtml" />
     <Content Include="Views\Admin\EditAnswer.cshtml" />
     <Content Include="Views\Admin\EditFake.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
-    <Content Include="Views\Home\Testing.cshtml" />
+    <Content Include="Views\Test\Test.cshtml" />
+    <Content Include="Views\Test\Testing.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Menu\Menu.cshtml" />
+    <Content Include="Views\Options\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Log files\" />
-    <Folder Include="Models\Membership\" />
+    <Folder Include="Content\menu\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

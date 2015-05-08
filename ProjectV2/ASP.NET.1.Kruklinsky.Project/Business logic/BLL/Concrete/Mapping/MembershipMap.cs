@@ -60,7 +60,8 @@ namespace BLL.Concrete
                  Id = item.Id,
                  FirstName = item.FirstName,
                  SecondName = item.SecondName,
-                 Birthday = item.Birthday
+                 Birthday = item.Birthday,
+                 Avatar = item.Avatar.ToDal(),
             };
         }
         public static Profile ToBll (this DAL.Interface.Entities.Profile item)
@@ -70,7 +71,27 @@ namespace BLL.Concrete
                 Id = item.Id,
                 FirstName = item.FirstName,
                 SecondName = item.SecondName,
-                Birthday = item.Birthday
+                Birthday = item.Birthday,
+                Avatar = item.Avatar.ToBll(),
+            };
+        }
+
+        public static DAL.Interface.Entities.Image ToDal(this Image item)
+        {
+            return new DAL.Interface.Entities.Image
+            {
+                Id = item.Id,
+                Data = item.Data,
+                MimeType = item.MimeType
+            };
+        }
+        public static Image ToBll(this DAL.Interface.Entities.Image item)
+        {
+            return new Image
+            {
+                Id = item.Id,
+                Data = item.Data,
+                MimeType = item.MimeType
             };
         }
     }

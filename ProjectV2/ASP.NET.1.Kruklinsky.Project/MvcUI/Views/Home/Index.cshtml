@@ -1,6 +1,4 @@
-﻿@model IEnumerable<MvcUI.Models.SubjectEditor>
-
-@section Links
+﻿@section Links
 {
     @Styles.Render("~/Content/home/css")
 }
@@ -10,23 +8,10 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+
 @{
     ViewBag.Title = "Home";
 }
 
-<div class="stroke">
-    @foreach (var subject in Model)
-    {
-        <div class="subject">
-            @Html.HideImage(subject.Subject.Id)
-            <label>@subject.Subject.Name</label>
-            <div id="@subject.Subject.Id">
-                @foreach (var test in subject.Tests)
-                {
-                    @Html.ActionLink(test.Name, "Test", "Home", new { testId = test.Id }, null)
-                    <br />
-                }
-            </div>
-        </div>
-    }
-</div>
+<h2>Home</h2>

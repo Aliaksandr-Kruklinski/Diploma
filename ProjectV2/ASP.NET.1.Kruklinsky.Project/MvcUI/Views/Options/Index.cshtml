@@ -1,0 +1,23 @@
+﻿@model MvcUI.Models.Membership.Profile
+
+@{
+    ViewBag.Title = String.Format("{0} {1}", 
+        Model.FirstName == null ? "FirstName" : Model.FirstName, 
+        Model.SecondName == null ? "SecondName" : Model.SecondName);
+}
+
+@using (Html.BeginForm("Index", "Options", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    <div id ="UserName"> 
+        @Html.EditorFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.SecondName)
+    </div>
+    <div id ="Message"> 
+        @Html.EditorFor(m => m.Birthday)
+    </div>
+    <div id="AvatarEditor">
+        <a>Avatar: </a>
+        <img src="@Url.Action("GetAvatar", "Options")" />
+        <input type="file" name="Image" />
+    </div>
+    <input type="submit" value="Save" />
+}

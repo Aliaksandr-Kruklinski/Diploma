@@ -64,6 +64,7 @@ namespace DependencyResolver
             Bind<IResultQueryService>().To<ResultQueryService>();
             Bind<ITestingService>().To<TestingService>();
             #endregion
+            Bind<IImageService>().To<ImageService>();
             #endregion
         }
     }

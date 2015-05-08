@@ -124,6 +124,7 @@ namespace DAL.Concrete
                 result.FirstName = profile.FirstName;
                 result.SecondName = profile.SecondName;
                 result.Birthday = profile.Birthday;
+                if (profile.Avatar != null)  result.Avatar = profile.Avatar.ToOrm();
                 this.context.SaveChanges();
             }
         }
@@ -179,6 +180,16 @@ namespace DAL.Concrete
         public bool RoleExists(string roleName)
         {
             return this.GetOrmRole(r => r.RoleName == roleName) != null;
+        }
+
+        public void LoadImage(string id, Image image)
+        {
+            var user = this.GetOrmUser(id.ToGuid());
+            if (user != null)
+            {
+                user.Images.Add(image.ToOrm());
+                this.context.SaveChanges();
+            }
         }
 
         #endregion

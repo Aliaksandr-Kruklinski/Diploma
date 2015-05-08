@@ -16,6 +16,8 @@ namespace ORM.Model
 
         public DateTime? Birthday { get; set; }
 
+        public virtual Image Avatar { get; set; }
+
         public virtual User User { get; set; }
     }
 }

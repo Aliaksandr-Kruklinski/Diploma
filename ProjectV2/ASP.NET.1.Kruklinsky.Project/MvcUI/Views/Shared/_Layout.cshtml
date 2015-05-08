@@ -19,6 +19,9 @@
                 @Html.RouteLink("Panda Quest", new { controller = "Home", action = "Index" }, new { @id = "Button-white" })
             </div>
         </div>
+        <div id="Menu">
+            @{ Html.RenderAction("Menu", "Menu"); }
+        </div>
         <div id="content">
             @RenderBody()
         </div>

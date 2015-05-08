@@ -28,34 +28,34 @@ namespace UnitTests
         [ExpectedException(typeof(System.ArgumentNullException))]
         public void Constructor_SubjectQueryServiceIsNull_Exception()
         {
-            var controller = new HomeController(null, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(null, testingService.Object, testQueryService.Object, testSessionFactory.Object);
         }
 
         [TestMethod]
         [ExpectedException(typeof(System.ArgumentNullException))]
         public void Constructor_TestingServiceIsNull_Exception()
         {
-            var controller = new HomeController(subjectQueryService.Object, null, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, null, testQueryService.Object, testSessionFactory.Object);
         }
 
         [TestMethod]
         [ExpectedException(typeof(System.ArgumentNullException))]
         public void Constructor_TestQueryServiceIsNull_Exception()
         {
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, null, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, null, testSessionFactory.Object);
         }
 
         [TestMethod]
         [ExpectedException(typeof(System.ArgumentNullException))]
         public void Constructor_TestSessionFactoryIsNull_Exception()
         {
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, null);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, null);
         }
 
         [TestMethod]
         public void Constructor_Can()
         {
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
         }
 
         #endregion
@@ -69,7 +69,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             RedirectToRouteResult result = (RedirectToRouteResult)controller.Test(testId);
 
@@ -88,7 +88,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             ActionResult result = controller.Test(testId);
 
@@ -105,7 +105,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(true);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             RedirectToRouteResult result = (RedirectToRouteResult)controller.StartTest(testId);
 
@@ -119,7 +119,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             RedirectToRouteResult result = (RedirectToRouteResult)controller.StartTest(testId);
 
@@ -138,7 +138,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
            
             RedirectToRouteResult result = (RedirectToRouteResult)controller.StartTest(testId);
 
@@ -154,7 +154,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             RedirectToRouteResult result = (RedirectToRouteResult)controller.Testing();
 
@@ -168,7 +168,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(true);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             ActionResult result = controller.Testing();
 
@@ -183,7 +183,7 @@ namespace UnitTests
         [ExpectedException(typeof(System.ArgumentNullException))]
         public void Testing_Post_AnswersIsNull_Exception()
         {
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             var result = controller.Testing(null);
         }
@@ -195,7 +195,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(false);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
             
             RedirectToRouteResult result = (RedirectToRouteResult)controller.Testing(answers.Object);
 
@@ -210,7 +210,7 @@ namespace UnitTests
             Mock<ITestSession> testSession = new Mock<ITestSession>();
             testSession.SetupGet(t => t.IsStarted).Returns(true);
             testSessionFactory.Setup(t => t.GetTestSession()).Returns(testSession.Object);
-            var controller = new HomeController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
+            var controller = new TestController(subjectQueryService.Object, testingService.Object, testQueryService.Object, testSessionFactory.Object);
 
             RedirectToRouteResult result = (RedirectToRouteResult)controller.Testing(answers.Object);
 

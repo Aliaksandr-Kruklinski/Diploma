@@ -26,6 +26,7 @@ namespace ORM.Model
         public DateTime CreateDate { get; set; }
 
         public virtual ICollection<Role> Roles { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
         public virtual Profile Profile { get; set; }
     }
 }

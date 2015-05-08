@@ -59,6 +59,7 @@
     <Compile Include="Concrete\Services\Test repository services\TestCreationService.cs" />
     <Compile Include="Concrete\Services\Test repository services\TestQueryService.cs" />
     <Compile Include="Concrete\Services\Test repository services\TestQuestionsManagementService.cs" />
+    <Compile Include="Concrete\Services\User repository services\Image services\ImageService.cs" />
     <Compile Include="Concrete\Services\User repository services\Profile services\ProfileService.cs" />
     <Compile Include="Concrete\Services\User repository services\Role services\RoleQueryService.cs" />
     <Compile Include="Concrete\Services\User repository services\Role services\UserRolesManagementService.cs" />

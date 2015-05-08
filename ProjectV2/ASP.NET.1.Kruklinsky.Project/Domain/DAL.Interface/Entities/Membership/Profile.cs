@@ -11,5 +11,7 @@ namespace DAL.Interface.Entities
         public string SecondName { get; set; }
 
         public DateTime? Birthday { get; set; }
+
+        public Image Avatar { get; set; }
     }
 }

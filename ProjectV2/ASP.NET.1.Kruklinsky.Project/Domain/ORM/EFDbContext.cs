@@ -32,6 +32,8 @@ namespace ORM
 
         #endregion
 
+        public virtual DbSet<Image> Images { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             #region Membership
@@ -52,6 +54,10 @@ namespace ORM
                 .WithMany(q => q.Tests)
                 .Map(m => { m.ToTable("QuestionsInTests"); m.MapLeftKey("TestId"); m.MapRightKey("QuestionId"); });
             modelBuilder.Entity<Result>().HasMany(r => r.Answers).WithRequired(a => a.Result);
+            #endregion
+            #region Image
+            modelBuilder.Entity<User>().HasMany(u => u.Images).WithRequired(i => i.User).Map(m => m.MapKey("UserId"));
+            modelBuilder.Entity<Profile>().HasOptional(p => p.Avatar);
             #endregion
         }
     }

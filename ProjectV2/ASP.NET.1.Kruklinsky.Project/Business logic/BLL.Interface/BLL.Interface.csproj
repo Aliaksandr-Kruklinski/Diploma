@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Abstract\Answers services\IAnswersQueryService.cs" />
     <Compile Include="Abstract\Answers services\IQuestionAnswersManagmentService.cs" />
+    <Compile Include="Abstract\Image services\IImageService.cs" />
     <Compile Include="Abstract\Question services\IQuestionCreationService.cs" />
     <Compile Include="Abstract\Question services\IQuestionQueryService.cs" />
     <Compile Include="Abstract\Result services\IResultQueryService.cs" />
@@ -57,6 +58,7 @@
     <Compile Include="Abstract\User services\IUserCreationService.cs" />
     <Compile Include="Abstract\User services\IUserQueryService.cs" />
     <Compile Include="Abstract\User services\IUserSecurityService.cs" />
+    <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\Knowledge\Answer.cs" />
     <Compile Include="Entities\Knowledge\Fake.cs" />
     <Compile Include="Entities\Knowledge\Question.cs" />

@@ -46,14 +46,18 @@ namespace MvcUI.Providers
         {
             return new BLL.Interface.Entities.Profile
             {
-
+                FirstName = item.FirstName,
+                SecondName = item.SecondName,
+                Birthday = item.Birthday
             };
         }
         public static Profile ToWeb(this BLL.Interface.Entities.Profile item)
         {
             return new Profile
             {
-
+                 FirstName = item.FirstName,
+                 SecondName = item.SecondName,
+                 Birthday = item.Birthday
             };
         }
 
@@ -62,6 +66,16 @@ namespace MvcUI.Providers
             return new Role
             {
 
+            };
+        }
+
+        public static BLL.Interface.Entities.Image ToBll(this Image item)
+        {
+            return new BLL.Interface.Entities.Image
+            {
+                 Id = item.Id,
+                 Data = item.Data,
+                 MimeType = item.MimeType
             };
         }
     }

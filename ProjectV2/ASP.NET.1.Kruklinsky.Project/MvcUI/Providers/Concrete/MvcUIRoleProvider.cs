@@ -49,7 +49,6 @@ namespace MvcUI.Providers
 
         public override string ApplicationName { get; set; }
 
-
         public override string[] GetRolesForUser(string email)
         {
             List<string> result = new List<string>();
