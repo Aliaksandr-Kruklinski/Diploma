@@ -14,8 +14,9 @@ namespace BLL.Concrete
     {
         public ImageService(IUserRepository userRepository, IDbContextScopeFactory dbContextScopeFactory) : base(userRepository, dbContextScopeFactory) { }
 
-        public void LoadImage(string id, Interface.Entities.Image image)
+        public int LoadImage(string id, Interface.Entities.Image image)
         {
+            int result = -1;
             UserExceptionsHelper.GetIdExceptions(id);
             if (image == null)
             {
@@ -23,9 +24,10 @@ namespace BLL.Concrete
             }
             using (var context = dbContextScopeFactory.Create())
             {
-                this.repository.LoadImage(id, image.ToDal());
+                result = this.repository.LoadImage(id, image.ToDal());
                 context.SaveChanges();
             }
+            return result;
         }
     }
 }

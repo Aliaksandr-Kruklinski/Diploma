@@ -14,14 +14,16 @@ namespace MvcUI.Controllers
     public class OptionsController : Controller
     {
         IImageService imageService;
+        IUserQueryService userQueryService;
 
-        public OptionsController(IImageService imageService)
+        public OptionsController(IImageService imageService, IUserQueryService userQueryService)
         {
             if (imageService == null)
             {
                 throw new System.ArgumentNullException("imageService", "Image service is null.");
             }
             this.imageService = imageService;
+            this.userQueryService = userQueryService;
         }
 
         public ActionResult Index()
@@ -45,8 +47,8 @@ namespace MvcUI.Controllers
                         Image newAvater = new Image { MimeType = image.ContentType, Data = new byte[image.ContentLength] };
                         image.InputStream.Read(newAvater.Data, 0, image.ContentLength);
                         string userId = Membership.GetUser(this.User.Identity.Name).ProviderUserKey.ToString();
-                        this.imageService.LoadImage(userId, newAvater.ToBll());
-                        HttpContext.Profile["Avatar"] = newAvater;
+                        int avatarId = this.imageService.LoadImage(userId, newAvater.ToBll());
+                        HttpContext.Profile["Avatar"] = avatarId;
                     }
 
                     HttpContext.Profile["FirstName"] = model.FirstName;
@@ -63,7 +65,13 @@ namespace MvcUI.Controllers
 
         public FileContentResult GetAvatar()
         {
-            Image userAvatar = HttpContext.Profile["Avatar"] == null ? null : (Image)HttpContext.Profile["Avatar"];
+            string userId = Membership.GetUser(this.User.Identity.Name).ProviderUserKey.ToString();
+            int imageId = (int)HttpContext.Profile["Avatar"];
+            Image userAvatar = null;
+            if (imageId != -1)
+            {
+                userAvatar = this.userQueryService.GetUser(userId).Images.Where(i => i.Id == imageId).First().ToWeb();
+            }
             if (userAvatar != null)
             {
                 return File(userAvatar.Data, userAvatar.MimeType);

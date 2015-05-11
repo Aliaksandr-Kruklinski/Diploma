@@ -24,6 +24,6 @@ namespace MvcUI.Models.Membership
         public Nullable<System.DateTime> Birthday { get; set; }
 
         [HiddenInput(DisplayValue = false)]
-        public string AvatarUrl { get; set; }
+        public int AvatarUrl { get; set; }
     }
 }

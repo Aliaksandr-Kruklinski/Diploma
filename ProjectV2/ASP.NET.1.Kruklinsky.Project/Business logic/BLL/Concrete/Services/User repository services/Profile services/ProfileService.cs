@@ -40,8 +40,17 @@ namespace BLL.Concrete
             }
             using (var context = dbContextScopeFactory.Create())
             {
-                this.repository.UpdateUserProfile(id, profile.ToDal());
-                context.SaveChanges();
+                var user = this.repository.GetUser(id);
+                if (user != null)
+                {
+                    DAL.Interface.Entities.Image avatar = null;
+                    if (profile.Avatar != -1 && user.Images != null)
+                    {
+                        avatar = user.Images.Value.Where(i => i.Id == profile.Avatar).First();
+                    }
+                    this.repository.UpdateUserProfile(id, profile.ToDal(avatar));
+                    context.SaveChanges();
+                }
             }
         }
 

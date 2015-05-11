@@ -18,7 +18,7 @@ namespace DAL.Interface.Entities
 
 
         public Lazy<Profile> Profile { get; set; }
-        public Lazy<Image> Images { get; set; }
+        public Lazy<IEnumerable<Image>> Images { get; set; }
         public Lazy<IEnumerable<Role>> Roles { get; set; }
     }
 }

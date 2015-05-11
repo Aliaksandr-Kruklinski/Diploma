@@ -38,8 +38,9 @@ namespace BLL.Concrete
                 Email = item.Email,
                 IsApproved = item.IsApproved,
                 CreateDate = item.CreateDate,
-                Profile = item == null ? null : item.Profile.Value.ToBll(),
-                Roles = item.Roles == null ? new List<Role>() : item.Roles.Value.Select(r => r.ToBll()).ToList()
+                Profile = item.Profile == null ? null : item.Profile.Value.ToBll(),
+                Roles = item.Roles == null ? new List<Role>() : item.Roles.Value.Select(r => r.ToBll()).ToList(),
+                Images = item.Images == null ? new List<Image> () : item.Images.Value.Select( i => i.ToBll()).ToList()
             };
         }
 
@@ -53,7 +54,7 @@ namespace BLL.Concrete
             };
         }
 
-        public static DAL.Interface.Entities.Profile ToDal(this Profile item)
+        public static DAL.Interface.Entities.Profile ToDal(this Profile item, DAL.Interface.Entities.Image image)
         {
             return new DAL.Interface.Entities.Profile
             {
@@ -61,7 +62,7 @@ namespace BLL.Concrete
                  FirstName = item.FirstName,
                  SecondName = item.SecondName,
                  Birthday = item.Birthday,
-                 Avatar = item.Avatar.ToDal(),
+                 Avatar = image == null ? null : image
             };
         }
         public static Profile ToBll (this DAL.Interface.Entities.Profile item)
@@ -72,7 +73,7 @@ namespace BLL.Concrete
                 FirstName = item.FirstName,
                 SecondName = item.SecondName,
                 Birthday = item.Birthday,
-                Avatar = item.Avatar.ToBll(),
+                Avatar = item.Avatar == null ? -1: item.Avatar.ToBll().Id
             };
         }
 

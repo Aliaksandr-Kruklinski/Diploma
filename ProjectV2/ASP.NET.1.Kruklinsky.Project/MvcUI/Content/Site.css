@@ -150,3 +150,13 @@ A#Button-white {
 .stroke {
     text-shadow: white 0 0 1px;
 }
+
+DIV#Avatar {
+    height: 350px;
+    width: 250px;
+    background-color: #6495ED;
+}
+    DIV#Avatar img.Avatar {
+        height: 350px;
+        width: 250px;
+    }

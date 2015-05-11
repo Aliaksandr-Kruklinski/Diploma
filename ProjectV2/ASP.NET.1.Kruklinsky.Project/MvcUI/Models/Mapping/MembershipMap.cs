@@ -81,7 +81,8 @@ namespace MvcUI.Models
             {
                 FirstName = item["FirstName"] == null ? "" : (string)item["FirstName"],
                 SecondName = item["SecondName"] == null ? "" : (string)item["SecondName"],
-                Birthday = item["Birthday"] == null ? new DateTime() : (DateTime)item["Birthday"]
+                Birthday = item["Birthday"] == null ? new DateTime() : (DateTime)item["Birthday"],
+                AvatarUrl = (int)item["Avatar"]
             };
         }
     }

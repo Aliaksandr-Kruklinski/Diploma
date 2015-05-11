@@ -20,6 +20,6 @@ namespace DAL.Interface.Abstract
         IEnumerable<Role> GetAllRoles();
         bool RoleExists(string roleName);
 
-        void LoadImage(string id, Image image);
+        int LoadImage(string id, Image image);
     }
 }

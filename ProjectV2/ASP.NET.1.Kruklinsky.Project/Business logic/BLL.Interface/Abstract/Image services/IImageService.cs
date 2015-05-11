@@ -9,6 +9,6 @@ namespace BLL.Interface.Abstract
 {
     public interface IImageService
     {
-        void LoadImage(string id, Image image);
+        int LoadImage(string id, Image image);
     }
 }

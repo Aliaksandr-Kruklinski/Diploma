@@ -30,7 +30,18 @@ namespace DAL.Concrete
                 IsApproved = item.IsApproved,
                 CreateDate = item.CreateDate,
                 Profile = new Lazy<Profile>(() => item.Profile == null ? null : item.Profile.ToDal()),
-                Roles = new Lazy<IEnumerable<Role>>(() => item.Roles == null ? new List<Role>() : item.Roles.Select(r => r.ToDal()).ToList())
+                Roles = new Lazy<IEnumerable<Role>>(() => item.Roles == null ? new List<Role>() : item.Roles.Select(r => r.ToDal()).ToList()),
+                Images = new Lazy<IEnumerable<Image>>(() => item.Images == null ? new List<Image>(): item.Images.Select(i => i.ToDal()).ToList())
+            };
+        }
+
+
+        public static Image ToDal (this ORM.Model.Image item)
+        {
+            return new Image {
+                Id = item.ImageId,
+                Data = item.ImageData,
+                MimeType = item.ImageMimeType
             };
         }
 
@@ -51,7 +62,8 @@ namespace DAL.Concrete
                 Id = item.ProfileId,
                 FirstName = item.FirstName,
                 SecondName = item.SecondName,
-                Birthday = item.Birthday
+                Birthday = item.Birthday,
+                Avatar = item.Avatar.ToDal()
             };
         }
 

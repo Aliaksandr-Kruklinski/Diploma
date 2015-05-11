@@ -12,6 +12,6 @@ namespace BLL.Interface.Entities
 
         public DateTime? Birthday { get; set; }
 
-        public Image Avatar { get; set; }
+        public int Avatar { get; set; }
     }
 }

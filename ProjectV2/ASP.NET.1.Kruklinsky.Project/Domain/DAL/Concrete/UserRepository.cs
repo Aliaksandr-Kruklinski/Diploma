@@ -121,10 +121,16 @@ namespace DAL.Concrete
                 {
                     user.Profile = new ORM.Model.Profile();
                 }
+
+                ORM.Model.Image avatar = null;
+                if (profile.Avatar != null)
+                {
+                    avatar = user.Images.Where(i => i.ImageId == profile.Avatar.Id).First();
+                }
                 result.FirstName = profile.FirstName;
                 result.SecondName = profile.SecondName;
                 result.Birthday = profile.Birthday;
-                if (profile.Avatar != null)  result.Avatar = profile.Avatar.ToOrm();
+                if (avatar != null) result.Avatar = avatar;
                 this.context.SaveChanges();
             }
         }
@@ -182,14 +188,21 @@ namespace DAL.Concrete
             return this.GetOrmRole(r => r.RoleName == roleName) != null;
         }
 
-        public void LoadImage(string id, Image image)
+        public int LoadImage(string id, Image image)
         {
+            var result = -1;
             var user = this.GetOrmUser(id.ToGuid());
             if (user != null)
             {
                 user.Images.Add(image.ToOrm());
                 this.context.SaveChanges();
             }
+            var newUser = this.GetOrmUser(id.ToGuid());
+            if (newUser != null)
+            {
+                result = newUser.Images.Last().ImageId;
+            }
+            return result;
         }
 
         #endregion

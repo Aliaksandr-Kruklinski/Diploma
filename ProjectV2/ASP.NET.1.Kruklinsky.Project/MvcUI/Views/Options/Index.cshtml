@@ -16,8 +16,10 @@
     </div>
     <div id="AvatarEditor">
         <a>Avatar: </a>
-        <img src="@Url.Action("GetAvatar", "Options")" />
-        <input type="file" name="Image" />
+        <div id="Avatar">
+            <img class="Avatar" src="@Url.Action("GetAvatar", "Options")" />
+            <input type="file" name="Image" />
+        </div>
     </div>
     <input type="submit" value="Save" />
 }

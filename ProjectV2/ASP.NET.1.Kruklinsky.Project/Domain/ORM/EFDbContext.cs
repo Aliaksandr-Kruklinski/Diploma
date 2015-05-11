@@ -57,7 +57,8 @@ namespace ORM
             #endregion
             #region Image
             modelBuilder.Entity<User>().HasMany(u => u.Images).WithRequired(i => i.User).Map(m => m.MapKey("UserId"));
-            modelBuilder.Entity<Profile>().HasOptional(p => p.Avatar);
+
+            modelBuilder.Entity<Profile>().HasOptional(p => p.Avatar).WithOptionalDependent().Map(m => m.MapKey("AvatarId"));
             #endregion
         }
     }
