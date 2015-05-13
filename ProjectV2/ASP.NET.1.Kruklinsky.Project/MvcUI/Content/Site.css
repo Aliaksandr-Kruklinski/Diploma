@@ -152,11 +152,16 @@ A#Button-white {
 }
 
 DIV#Avatar {
-    height: 350px;
-    width: 250px;
+    width: 200px;
+    height: 200px;
     background-color: #6495ED;
 }
     DIV#Avatar img.Avatar {
-        height: 350px;
-        width: 250px;
+display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 5px solid #FFFFFF;
+    background: #FFFFFF;
+    outline: 1px solid #CCCCCC;
     }

@@ -32,7 +32,20 @@ namespace ORM
 
         #endregion
 
+        #region Image
+
         public virtual DbSet<Image> Images { get; set; }
+
+        #endregion
+
+        #region Wall
+
+        public virtual DbSet<Wall> Walls { get; set; }
+        public virtual DbSet<WallMessage> WallMessages { get; set; }
+        public virtual DbSet<WallComment> WallComments { get; set; }
+
+        #endregion
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -57,8 +70,14 @@ namespace ORM
             #endregion
             #region Image
             modelBuilder.Entity<User>().HasMany(u => u.Images).WithRequired(i => i.User).Map(m => m.MapKey("UserId"));
-
             modelBuilder.Entity<Profile>().HasOptional(p => p.Avatar).WithOptionalDependent().Map(m => m.MapKey("AvatarId"));
+            #endregion
+            #region Wall
+            modelBuilder.Entity<User>().HasRequired(u => u.Wall).WithRequiredPrincipal(w => w.User).Map(m => m.MapKey("UserId"));
+            modelBuilder.Entity<Wall>().HasMany(w => w.Messages).WithRequired(m => m.Wall).Map(m => m.MapKey("WallId"));
+            modelBuilder.Entity<WallMessage>().HasRequired(m => m.User).WithRequiredDependent().Map(m => m.MapKey("UserId"));
+            modelBuilder.Entity<WallMessage>().HasMany(m => m.Comments).WithRequired(c => c.Message).Map(m => m.MapKey("MessageId"));
+            modelBuilder.Entity<WallComment>().HasRequired(m => m.User).WithRequiredDependent().Map(m => m.MapKey("UserId"));
             #endregion
         }
     }

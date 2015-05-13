@@ -67,6 +67,9 @@
     <Compile Include="Model\Knowledge\Fake.cs" />
     <Compile Include="Model\Knowledge\Question.cs" />
     <Compile Include="Model\Knowledge\Subject.cs" />
+    <Compile Include="Model\Wall\Wall.cs" />
+    <Compile Include="Model\Wall\WallComment.cs" />
+    <Compile Include="Model\Wall\WallMessage.cs" />
     <Compile Include="Model\Test\Result.cs" />
     <Compile Include="Model\Knowledge\Test.cs" />
     <Compile Include="Model\Membership\Profile.cs" />
@@ -96,9 +99,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Message\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
