@@ -66,7 +66,8 @@ namespace BLL.Concrete
             {
                 Email = email,
                 IsApproved = isApproved,
-                CreateDate = DateTime.Now
+                CreateDate = DateTime.Now,
+
             };
             using (var context = dbContextScopeFactory.Create())
             {

@@ -54,7 +54,7 @@ namespace MvcUI.Filters
             {
                 base.OnException(filterContext);
             }
-            logger.Error(filterContext.Exception.Message, filterContext.Exception);
+           logger.Error(filterContext.Exception.Message, filterContext.Exception);
         }
 
         private bool IsAjax(ExceptionContext filterContext)

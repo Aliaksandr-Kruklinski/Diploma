@@ -24,4 +24,6 @@ namespace MvcUI.Models
         public bool UserAnswer { get; set; }
         public string Text { get; set; }
     }
+
+
 }

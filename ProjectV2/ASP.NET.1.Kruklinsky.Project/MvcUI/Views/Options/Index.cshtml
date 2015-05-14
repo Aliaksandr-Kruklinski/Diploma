@@ -1,5 +1,10 @@
 ﻿@model MvcUI.Models.Membership.Profile
 
+@section Links
+{
+    @Styles.Render("~/Content/home/css")
+}
+
 @{
     ViewBag.Title = String.Format("{0} {1}", 
         Model.FirstName == null ? "FirstName" : Model.FirstName, 
@@ -8,17 +13,15 @@
 
 @using (Html.BeginForm("Index", "Options", FormMethod.Post, new { enctype = "multipart/form-data" })) {
     <div id ="UserName"> 
-        @Html.EditorFor(m => m.FirstName)
-        @Html.TextBoxFor(m => m.SecondName)
-    </div>
-    <div id ="Message"> 
-        @Html.EditorFor(m => m.Birthday)
+            @Html.EditorFor(m => m.FirstName)
+            @Html.TextBoxFor(m => m.SecondName)
+            @Html.EditorFor(m => m.Birthday)
     </div>
     <div id="AvatarEditor">
         <a>Avatar: </a>
         <div id="Avatar">
             <img class="Avatar" src="@Url.Action("GetAvatar", "Options")" />
-            <input type="file" name="Image" />
+                <input class="stroke" type="file" name="Image" />
         </div>
     </div>
     <input type="submit" value="Save" />

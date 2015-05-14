@@ -1,4 +1,6 @@
-﻿@section Links
+﻿@model MvcUI.Models.Membership.Profile
+
+@section Links
 {
     @Styles.Render("~/Content/home/css")
 }
@@ -14,4 +16,33 @@
     ViewBag.Title = "Home";
 }
 
-<h2>Home</h2>
+
+
+<div id="Wall">
+    <div id="Info">
+        <div id="Results">
+            <a>Resutts</a>
+        </div>
+        <div id="user-info">
+            <div id="user-info-names">
+                <a class="first-name">@Model.FirstName</a>
+                <a class="second-name">@Model.SecondName</a>
+            </div>
+            <div id="user-info-avatar">
+                <img class="Avatar" src="@Url.Action("GetAvatar", "Options")" />
+            </div>
+            <div id="user-info-additional">
+                @if (Model.Birthday.HasValue)
+                {
+                    <a class="birthday">@Model.Birthday.Value.ToString("dd.MM.yyyy")</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="Messages">
+        <a>Messages</a>
+    </div>
+</div>
+
+
+

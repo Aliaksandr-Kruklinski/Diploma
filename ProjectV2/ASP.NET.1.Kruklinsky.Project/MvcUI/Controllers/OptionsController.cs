@@ -31,7 +31,7 @@ namespace MvcUI.Controllers
             var model = HttpContext.Profile.ToWeb();
             if (string.IsNullOrEmpty(model.FirstName)) model.FirstName = "First name";
             if (string.IsNullOrEmpty(model.SecondName)) model.SecondName = "Second Name";
-            if (model.Birthday.Value.Year.CompareTo(DateTime.Today.Year - 100) < 0) model.Birthday = DateTime.Today.AddYears(-100);
+            if (model.Birthday.Value.Year.CompareTo(DateTime.Today.Year - 100) <= 0) model.Birthday = null;
             return View(model);
         }
 
@@ -51,10 +51,18 @@ namespace MvcUI.Controllers
                         HttpContext.Profile["Avatar"] = avatarId;
                     }
 
-                    HttpContext.Profile["FirstName"] = model.FirstName;
-                    HttpContext.Profile["SecondName"] = model.SecondName;
-                    HttpContext.Profile["Birthday"] = model.Birthday.Value;
+                    if (model.FirstName != "First name") HttpContext.Profile["FirstName"] = model.FirstName;
+                    if (model.SecondName != "Second Name") HttpContext.Profile["SecondName"] = model.SecondName;
+                    if (!model.Birthday.HasValue)
+                    {
+                        HttpContext.Profile["Birthday"] = DateTime.Today.AddYears(-100);
+                    }
+                    else if (model.Birthday.Value.Year.CompareTo(DateTime.Today.Year - 100) > 0)
+                    {
+                        HttpContext.Profile["Birthday"] = model.Birthday.Value;
+                    }
                 }
+
                 return RedirectToAction("Index", new { selectedLink = 3 });
             }
             catch

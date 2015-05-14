@@ -63,7 +63,7 @@ namespace DAL.Concrete
                 FirstName = item.FirstName,
                 SecondName = item.SecondName,
                 Birthday = item.Birthday,
-                Avatar = item.Avatar.ToDal()
+                Avatar = item.Avatar == null ? null :item.Avatar.ToDal()
             };
         }
 

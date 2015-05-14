@@ -58,3 +58,39 @@ Div.testing {
     input.check-box {
         margin-right: 5px;
     }
+
+
+    DIV#Avatar {
+    width: 205px;
+    text-align:right;
+}
+    DIV#Avatar img.Avatar {
+        display: inline-block;
+        width: 205px;
+        height: 205px;
+        overflow: hidden;
+        border: 5px solid #353535;
+        background: #FFFFFF;
+        outline: 1px solid #CCCCCC;
+    }
+    DIV#UserName {
+        text-align: left;
+    }
+
+a.first-name {
+       text-decoration:none;
+}
+a.second-name {
+       text-decoration:none;
+}
+a.birthday {
+   text-decoration:none;
+}
+
+
+
+DIV#Results {
+    width: 420px;
+    float: right;
+    background-color:black;
+}
