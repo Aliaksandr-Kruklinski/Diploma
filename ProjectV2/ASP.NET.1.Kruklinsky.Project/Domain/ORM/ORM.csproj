@@ -67,6 +67,8 @@
     <Compile Include="Model\Knowledge\Fake.cs" />
     <Compile Include="Model\Knowledge\Question.cs" />
     <Compile Include="Model\Knowledge\Subject.cs" />
+    <Compile Include="Model\Message\Dialog.cs" />
+    <Compile Include="Model\Message\Message.cs" />
     <Compile Include="Model\Wall\Wall.cs" />
     <Compile Include="Model\Wall\WallComment.cs" />
     <Compile Include="Model\Wall\WallMessage.cs" />

@@ -46,6 +46,11 @@ namespace ORM
 
         #endregion
 
+        #region Message
+        public virtual DbSet<Dialog> Dialogs { get; set; }
+        public virtual DbSet<Message> Messages { get; set; }
+        #endregion
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -73,9 +78,17 @@ namespace ORM
             modelBuilder.Entity<Profile>().HasOptional(p => p.Avatar).WithOptionalDependent().Map(m => m.MapKey("AvatarId"));
             #endregion
             #region Wall
-            modelBuilder.Entity<User>().HasRequired(u => u.Wall).WithRequiredPrincipal(w => w.User).Map(m => m.MapKey("UserId"));
+            //modelBuilder.Entity<User>().HasRequired(u => u.Wall).WithRequiredPrincipal(w => w.User).Map(m => m.MapKey("UserId"));
+            //modelBuilder.Entity<User>().HasRequired(u => u.PrivateWall).WithRequiredPrincipal(w => w.User).Map(m => m.MapKey("UserId"));
             modelBuilder.Entity<Wall>().HasMany(w => w.Messages).WithRequired(m => m.Wall).Map(m => m.MapKey("WallId"));
             modelBuilder.Entity<WallMessage>().HasMany(m => m.Comments).WithRequired(c => c.Message).Map(m => m.MapKey("MessageId"));
+            #endregion
+            #region Message
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.Dialogs)
+                .WithMany(d => d.Users)
+                .Map(m => { m.ToTable("UsersInDialogs"); m.MapLeftKey("UserId"); m.MapRightKey("DialogId"); });
+            modelBuilder.Entity<Dialog>().HasMany(d => d.Messages).WithRequired(m => m.Dialog).Map(m => m.MapKey("DialogId"));
             #endregion
         }
     }

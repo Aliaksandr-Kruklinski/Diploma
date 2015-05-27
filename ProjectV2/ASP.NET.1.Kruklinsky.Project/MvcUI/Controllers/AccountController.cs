@@ -84,7 +84,7 @@ namespace MvcUI.Controllers
         [HttpPost]
         public JsonResult IsFreeEmail(string email)
         {
-            bool result = false;
+                bool result = false;
             MvcUIMembershipProvider provider = (Membership.Provider as MvcUIMembershipProvider);
             if (provider != null)
             {
