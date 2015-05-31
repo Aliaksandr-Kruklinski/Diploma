@@ -49,6 +49,7 @@
     <Compile Include="Concrete\Mapping\KnowledgeMap.cs" />
     <Compile Include="Concrete\Mapping\MembershipMap.cs" />
     <Compile Include="Concrete\Mapping\TestMap.cs" />
+    <Compile Include="Concrete\Mapping\WallMap.cs" />
     <Compile Include="Concrete\Services\Question repository services\Answers services\AnswersQueryService.cs" />
     <Compile Include="Concrete\Services\Question repository services\Answers services\QuestionAnswersManagmentService.cs" />
     <Compile Include="Concrete\Services\Question repository services\Question services\QuestionCreationService.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Concrete\Services\User repository services\User services\UserQueryService.cs" />
     <Compile Include="Concrete\Services\User repository services\User services\UserSecurityService.cs" />
     <Compile Include="Concrete\Services\User repository services\EmailService.cs" />
+    <Compile Include="Concrete\Services\Wall repository services\WallService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -51,7 +51,8 @@ namespace DAL.Concrete
         {
             var result = item.ToOrm();
             result.Profile = new ORM.Model.Profile();
-            //result.Wall = new ORM.Model.Wall();
+            result.Wall = new ORM.Model.Wall();
+            result.PrivateWall = new ORM.Model.Wall();
             this.context.Set<ORM.Model.User>().Add(result);
             this.context.SaveChanges();
         }

@@ -116,6 +116,5 @@ namespace BLL.Concrete
                 Description = item.Description,
             };
         }
-
     }
 }

@@ -60,11 +60,15 @@ Div.testing {
     }
 
 
-    DIV#Avatar {
+    Div#user-info {
+        width: 205px;
+    }
+
+    Div.Avatar {
     width: 205px;
     text-align:right;
 }
-    DIV#Avatar img.Avatar {
+    img.Avatar {
         display: inline-block;
         width: 205px;
         height: 205px;
@@ -73,6 +77,7 @@ Div.testing {
         background: #FFFFFF;
         outline: 1px solid #CCCCCC;
     }
+
     DIV#UserName {
         text-align: left;
     }
@@ -87,10 +92,53 @@ a.birthday {
    text-decoration:none;
 }
 
-
+Div#user-info-additional {
+    text-align: right;
+}
 
 DIV#Results {
     width: 420px;
     float: right;
     background-color:black;
 }
+
+DIV#Messages {
+    margin-top: 10px;
+
+}
+
+
+
+DIV.PageLinks {
+    text-align: right;
+    border-top: 2px solid silver;
+    padding: .5em 0 0 0;
+    margin-top: 1em;
+}
+    DIV.PageLinks A {
+        font-size: 1.1em;
+        color: #666;
+        text-decoration: none;
+        padding: 0 .4em 0 .4em;
+    }
+        DIV.PageLinks A:hover {
+            background-color: Silver;
+        }
+        DIV.PageLinks A.selected {
+            background-color: #353535;
+            color: White;
+        }
+
+Div.Message {
+    padding: 10px;
+}
+    Div.Message Div.SenderIcon {
+        float:left;
+    }
+    Div.Message Div.Time {
+        margin-left: 80px;
+    }
+    Div.Message Div.Text {
+        margin-left: 80px;
+        text-align: justify;
+    }

@@ -20,5 +20,8 @@ namespace DAL.Interface.Entities
         public Lazy<Profile> Profile { get; set; }
         public Lazy<IEnumerable<Image>> Images { get; set; }
         public Lazy<IEnumerable<Role>> Roles { get; set; }
+
+        public int Wall { get; set; }
+        public int PrivateWall { get; set; }
     }
 }

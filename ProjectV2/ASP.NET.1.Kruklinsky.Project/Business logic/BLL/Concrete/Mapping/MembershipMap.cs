@@ -40,7 +40,9 @@ namespace BLL.Concrete
                 CreateDate = item.CreateDate,
                 Profile = item.Profile == null ? null : item.Profile.Value.ToBll(),
                 Roles = item.Roles == null ? new List<Role>() : item.Roles.Value.Select(r => r.ToBll()).ToList(),
-                Images = item.Images == null ? new List<Image> () : item.Images.Value.Select( i => i.ToBll()).ToList()
+                Images = item.Images == null ? new List<Image> () : item.Images.Value.Select( i => i.ToBll()).ToList(),
+                Wall = item.Wall,
+                PrivateWall = item.PrivateWall
             };
         }
 

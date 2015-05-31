@@ -17,5 +17,8 @@ namespace BLL.Interface.Entities
         public IEnumerable<Role> Roles { get; set; }
         public IEnumerable<Image> Images { get; set; }
         public Profile Profile { get; set; }
+
+        public int Wall { get; set; }
+        public int PrivateWall { get; set; }
     }
 }

@@ -19,14 +19,24 @@
 <div id="Wall">
     <div id="Info">
         <div id="Results">
-            <a>Resutts</a>
+            <a>Resutts
+                3 ЛОГИЧЕСКОЕ МОДЕЛИРОВАНИЕ
+                3.1 Построение логической модели данных
+                3.2 Построение алгоритмов процессов
+                3.3 Разработка сценариев и макетов экранных форм
+                4 ФИЗИЧЕСКОЕ МОДЕЛИРОВАНИЕ
+                4.1 Выбор среды разработки, языка программирования и инструментальных средств разработки
+                4.2 Построение физической модели данных……………………………………………
+                4.3 Построение диаграмм классов
+                4.4 Построение диаграмм компонентов………………………………………………
+            </a>
         </div>
         <div id="user-info">
             <div id="user-info-names">
                 <a class="first-name">@Model.FirstName</a>
                 <a class="second-name">@Model.SecondName</a>
             </div>
-            <div id="user-info-avatar">
+            <div id="user-info-avatar" class="Avatar">
                 <img class="Avatar" src="@Url.Action("GetAvatar", "Options")" />
             </div>
             <div id="user-info-additional">
@@ -38,7 +48,23 @@
         </div>
     </div>
     <div id="Messages">
-        <a>Messages</a>
+        @{
+            Html.RenderAction(
+                 "List",
+                 "Wall",
+                 new
+                 {
+                     controllerName = "Home",
+                     userId = @Membership.GetUser(User.Identity.Name) == null ? -1 : @Membership.GetUser(User.Identity.Name).ProviderUserKey,
+                     page = ViewBag.SelectedPage
+                 }
+            );
+        }
+        @using (Html.BeginForm())
+        {
+            @Html.EditorFor(m => m.FirstName)
+            <input type="submit" value="Отправить" />
+        }
     </div>
 </div>
 

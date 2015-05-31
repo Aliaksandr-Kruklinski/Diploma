@@ -15,10 +15,7 @@ namespace MvcUI
 
             RegisterAccountRoutes(routes);
             RegisterVerifyRoutes(routes);
-
             RegisterAdminRoutes(routes);
-
-
 
             routes.MapRoute(
                 name: "Default",

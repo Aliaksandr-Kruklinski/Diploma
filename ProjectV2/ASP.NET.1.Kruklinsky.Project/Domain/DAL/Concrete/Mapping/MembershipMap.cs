@@ -31,7 +31,9 @@ namespace DAL.Concrete
                 CreateDate = item.CreateDate,
                 Profile = new Lazy<Profile>(() => item.Profile == null ? null : item.Profile.ToDal()),
                 Roles = new Lazy<IEnumerable<Role>>(() => item.Roles == null ? new List<Role>() : item.Roles.Select(r => r.ToDal()).ToList()),
-                Images = new Lazy<IEnumerable<Image>>(() => item.Images == null ? new List<Image>(): item.Images.Select(i => i.ToDal()).ToList())
+                Images = new Lazy<IEnumerable<Image>>(() => item.Images == null ? new List<Image>(): item.Images.Select(i => i.ToDal()).ToList()),
+                Wall =  item.Wall.WallId,
+                PrivateWall = item.PrivateWall.WallId
             };
         }
 

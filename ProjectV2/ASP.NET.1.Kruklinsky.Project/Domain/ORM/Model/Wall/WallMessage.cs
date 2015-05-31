@@ -18,8 +18,8 @@ namespace ORM.Model
         [Required]
         public DateTime Time { get; set; }
 
-
-        public virtual User User { get; set; }
+        [Required]
+        public string UserId { get; set; }
         public virtual ICollection<WallComment> Comments { get; set; }
         public virtual Wall Wall { get; set; }
     }

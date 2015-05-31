@@ -58,6 +58,7 @@
     <Compile Include="Abstract\User services\IUserCreationService.cs" />
     <Compile Include="Abstract\User services\IUserQueryService.cs" />
     <Compile Include="Abstract\User services\IUserSecurityService.cs" />
+    <Compile Include="Abstract\Wall services\IWallService.cs" />
     <Compile Include="Entities\Image.cs" />
     <Compile Include="Entities\Knowledge\Answer.cs" />
     <Compile Include="Entities\Knowledge\Fake.cs" />
@@ -69,6 +70,9 @@
     <Compile Include="Entities\Test\Result.cs" />
     <Compile Include="Entities\Knowledge\Test.cs" />
     <Compile Include="Entities\Test\UserAnswer.cs" />
+    <Compile Include="Entities\Wall\Wall.cs" />
+    <Compile Include="Entities\Wall\WallComment.cs" />
+    <Compile Include="Entities\Wall\WallMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
