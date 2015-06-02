@@ -56,5 +56,34 @@ namespace MvcUI.Controllers
             }
         }
 
+        public ActionResult Private(int page = 1)
+        {
+            var model = HttpContext.Profile.ToWeb();
+            ViewBag.SelectedPage = page;
+            if (model.Birthday.Value.Year.CompareTo(DateTime.Today.Year - 100) <= 0) model.Birthday = null;
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Private(string FirstName)
+        {
+            try
+            {
+                var userId = Membership.GetUser(this.User.Identity.Name).ProviderUserKey.ToString();
+                var user = userQueryService.GetUser(userId);
+                wallService.AddMessage(user.PrivateWall, new BLL.Interface.Entities.WallMessage
+                {
+                    Text = FirstName,
+                    Time = DateTime.Now,
+                    UserId = user.Id
+                });
+
+                return RedirectToAction("Private");
+            }
+            catch
+            {
+                return RedirectToAction("Private");
+            }
+        }
     }
 }

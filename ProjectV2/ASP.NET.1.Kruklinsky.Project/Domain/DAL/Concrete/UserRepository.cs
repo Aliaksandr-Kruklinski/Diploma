@@ -43,10 +43,11 @@ namespace DAL.Concrete
         {
             get 
             {
-                IEnumerable<ORM.Model.User> result = this.context.Set<ORM.Model.User>();
+                var result = this.context.Set<ORM.Model.User>();
                 return result.Select(u => u.ToDal()).ToList();
             }
         }
+
         public void Add(User item)
         {
             var result = item.ToOrm();
@@ -254,5 +255,20 @@ namespace DAL.Concrete
         }
 
         #endregion
+
+
+        public IEnumerable<User> GetAllUsers()
+        {
+            IEnumerable<ORM.Model.User> result = this.context.Set<ORM.Model.User>();
+            return result.Select(u => ToDal(u)).ToList();
+        }
+
+        public User ToDal(ORM.Model.User item)
+        {
+            return new User()
+            {
+                Id = item.UserId.ToString(),
+            };
+        }
     }
 }

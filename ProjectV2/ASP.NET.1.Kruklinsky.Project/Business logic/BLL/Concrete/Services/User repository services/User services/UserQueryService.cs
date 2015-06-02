@@ -52,7 +52,7 @@ namespace BLL.Concrete
             IEnumerable<User> result = new List<User>();
             using (var context = dbContextScopeFactory.CreateReadOnly())
             {
-                var users = this.repository.Data;
+                var users = this.repository.GetAllUsers();
                 if (users.Count() != 0)
                 {
                     result = users.Select(u => u.ToBll());

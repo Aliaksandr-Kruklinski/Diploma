@@ -21,5 +21,7 @@ namespace DAL.Interface.Abstract
         bool RoleExists(string roleName);
 
         int LoadImage(string id, Image image);
+
+        IEnumerable<User> GetAllUsers();
     }
 }

@@ -29,19 +29,19 @@ namespace MvcUI.HtmlHelpers
         private static void AuthenticatedButtons(HtmlHelper html, bool isAdmin, ref StringBuilder result)
         {
             RolesButtons(html, isAdmin, result);
-            result.Append(html.RouteLink("Results | ", new { controller = "Result", action = "Index" }, new { @id = "Button" }));
-            result.Append(html.RouteLink("Log Out", new { controller = "Account", action = "LogOut" }, new { @id = "Button" }));
+            result.Append(html.RouteLink("Результаты | ", new { controller = "Result", action = "Index" }, new { @id = "Button" }));
+            result.Append(html.RouteLink("Выйти", new { controller = "Account", action = "LogOut" }, new { @id = "Button" }));
         }
 
         private static void NoAuthenticatedButtons(HtmlHelper html, string actionName, ref StringBuilder result)
         {
             if (actionName != "SignUp")
             {
-                result.Append(html.RouteLink("Sing Up", new { controller = "Account", action = "SignUp" }, new { @id = "Button" }));
+                result.Append(html.RouteLink("Зарегистрироваться", new { controller = "Account", action = "SignUp" }, new { @id = "Button" }));
             }
             else
             {
-                result.Append(html.RouteLink("Log In", new { controller = "Account", action = "LogIn" }, new { @id = "Button" }));
+                result.Append(html.RouteLink("Войти", new { controller = "Account", action = "LogIn" }, new { @id = "Button" }));
             }
         }
 
@@ -49,11 +49,11 @@ namespace MvcUI.HtmlHelpers
         {
             if (isAdmin)
             {
-                result.Append(html.RouteLink("Administration | ", new { controller = "Admin", action = "Index" }, new { @id = "Button" }));
+                result.Append(html.RouteLink("Тесты | ", new { controller = "Admin", action = "Index" }, new { @id = "Button" }));
             }
             else
             {
-                result.Append(html.RouteLink("Profile | ", new { controller = "Profile", action = "Index" }, new { @id = "Button" }));
+               // result.Append(html.RouteLink("Настройки | ", new { controller = "Options", action = "Index" }, new { @id = "Button" }));
             }
         }
 

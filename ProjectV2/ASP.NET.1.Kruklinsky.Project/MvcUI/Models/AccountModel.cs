@@ -11,13 +11,13 @@ namespace MvcUI.Models
     {
         [Required]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email address")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Please enter a valid email address.")]
+        [Display(Name = "Email адрес")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Пожалуйста введите полный адрес.")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Пароль")]
         public string Password { get; set; }
     }
 
@@ -25,20 +25,20 @@ namespace MvcUI.Models
     {
         [Required]
         [DataType(DataType.EmailAddress)]
-        [Display(Name = "Email address")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Please enter a valid email address.")]
-        [Remote("IsFreeEmail", "Account", HttpMethod = "POST", ErrorMessage = "User name already exists. Please enter a different user name.")]
+        [Display(Name = "Email Адрес")]
+        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "Пожалуйста введите полный адрес.")]
+        [Remote("IsFreeEmail", "Account", HttpMethod = "POST", ErrorMessage = "Адрес уже зарегестрирован. Пожалуйста введите новый адрес.")]
         public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Display(Name = "Пароль")]
+        [StringLength(100, ErrorMessage = "{0} должен быть минимум {2} символов.", MinimumLength = 6)]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [System.Web.Mvc.Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Подтверждение пароля")]
+        [System.Web.Mvc.Compare("Password", ErrorMessage = "Пароль и его подтверждение не совпадают.")]
         public string ConfirmPassword { get; set; }
     }
 

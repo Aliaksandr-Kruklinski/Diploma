@@ -11,6 +11,7 @@ using MvcUI.Providers;
 
 namespace MvcUI.Controllers
 {
+    [Authorize]
     public class OptionsController : Controller
     {
         IImageService imageService;

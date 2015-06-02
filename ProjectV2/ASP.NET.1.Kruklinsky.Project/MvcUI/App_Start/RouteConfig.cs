@@ -17,6 +17,8 @@ namespace MvcUI
             RegisterVerifyRoutes(routes);
             RegisterAdminRoutes(routes);
 
+            RegisterGuestRoutes(routes);
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
@@ -48,6 +50,11 @@ namespace MvcUI
             routes.MapRoute(null, "Admin/EditTest/{testId}", new { controller = "Admin", action = "EditTest" }, new { testId = @"\d+" });
             routes.MapRoute(null, "Admin/EditQuestion{questionId}", new { controller = "Admin", action = "EditQuestion" }, new { questionId = @"\d+" });
             routes.MapRoute(null, "Admin/EditQuestion/{questionId}", new { controller = "Admin", action = "EditQuestion" }, new { questionId = @"\d+" });
+        }
+
+        private static void RegisterGuestRoutes (RouteCollection routes)
+        {
+            routes.MapRoute(null, "Guest/{userId}", new { controller = "Guest", action = "Index" });
         }
     }
 }

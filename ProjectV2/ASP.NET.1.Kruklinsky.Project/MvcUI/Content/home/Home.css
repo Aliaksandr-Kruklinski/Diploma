@@ -142,3 +142,10 @@ Div.Message {
         margin-left: 80px;
         text-align: justify;
     }
+
+
+    Div.Friend {
+    padding: 10px;
+    display: inline-block;
+    font-size: 75%;
+}

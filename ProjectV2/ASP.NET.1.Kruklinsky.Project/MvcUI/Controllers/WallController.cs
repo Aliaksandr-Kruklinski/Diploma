@@ -31,7 +31,7 @@ namespace MvcUI.Controllers
                 {
 
                     WallMessages = this.wallService.GetAllMessages(user.Wall)
-                        .OrderBy(m => m.Time)
+                        .OrderByDescending(m => m.Time)
                         .Skip((page - 1) * PageSize)
                         .Take(PageSize)
                         .Select( m => m.ToWeb()),
@@ -49,18 +49,49 @@ namespace MvcUI.Controllers
             return PartialView();
         }
 
+        public PartialViewResult PrivateList(string controllerName, string userId, int page = 1)
+        {
+            var user = userQueryService.GetUser(userId);
+            if (user != null)
+            {
+                var viewModel = new WallMessagePagingModel
+                {
+
+                    WallMessages = this.wallService.GetAllMessages(user.PrivateWall)
+                        .OrderByDescending(m => m.Time)
+                        .Skip((page - 1) * PageSize)
+                        .Take(PageSize)
+                        .Select(m => m.ToWeb()),
+                    Paginglnfo = new Paginglnfo
+                    {
+                        ControllerName = controllerName,
+                        CurrentPage = page,
+                        ItemsPerPage = PageSize,
+                        TotalItems = this.wallService.GetAllMessages(user.PrivateWall).Count()
+                    },
+                    userId = userId
+                };
+                return PartialView(viewModel);
+            }
+            return PartialView();
+        }
+
 
         public FileContentResult GetAvatar(string userId)
         {
-            int imageId = (int)HttpContext.Profile["Avatar"];
-            Image userAvatar = null;
-            if (imageId != -1)
+            var user = userQueryService.GetUser(userId);
+            if (user != null)
             {
-                userAvatar = this.userQueryService.GetUser(userId).Images.Where(i => i.Id == imageId).First().ToWeb();
-            }
-            if (userAvatar != null)
-            {
-                return File(userAvatar.Data, userAvatar.MimeType);
+                int imageId = user.Profile.Avatar;
+                Image userAvatar = null;
+                if (imageId != -1)
+                {
+                    userAvatar = user.Images.Where(i => i.Id == imageId).First().ToWeb();
+                }
+                if (userAvatar != null)
+                {
+                    return File(userAvatar.Data, userAvatar.MimeType);
+                }
             }
             return null;
         }

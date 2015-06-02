@@ -63,16 +63,17 @@ namespace MvcUI.Models
     //             Birthday = item.Birthday
     //        };
     //    }
-    //    public static Profile ToBll (this DAL.Interface.Entities.Profile item)
-    //    {
-    //        return new Profile
-    //        {
-    //            Id = item.Id,
-    //            FirstName = item.FirstName,
-    //            SecondName = item.SecondName,
-    //            Birthday = item.Birthday
-    //        };
-    //    }
+
+        public static Profile ToWeb(this BLL.Interface.Entities.Profile item)
+        {
+            return new Profile
+            {
+                FirstName = item.FirstName,
+                SecondName = item.SecondName,
+                Birthday = item.Birthday,
+                AvatarUrl = item.Avatar
+            };
+        }
     
 
         public static Profile ToWeb (this System.Web.Profile.ProfileBase item)

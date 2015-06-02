@@ -141,6 +141,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FriendController.cs" />
+    <Compile Include="Controllers\GuestController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\OptionsController.cs" />
@@ -165,6 +167,7 @@
     <Compile Include="Model binders\TestingModelBinder.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AdminModel.cs" />
+    <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\Knowledge\Answer.cs" />
     <Compile Include="Models\Knowledge\Fake.cs" />
@@ -333,6 +336,10 @@
     <Content Include="Views\Menu\Menu.cshtml" />
     <Content Include="Views\Options\Index.cshtml" />
     <Content Include="Views\Wall\List.cshtml" />
+    <Content Include="Views\Guest\Index.cshtml" />
+    <Content Include="Views\Friend\Index.cshtml" />
+    <Content Include="Views\Home\Private.cshtml" />
+    <Content Include="Views\Wall\PrivateList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Log files\" />
