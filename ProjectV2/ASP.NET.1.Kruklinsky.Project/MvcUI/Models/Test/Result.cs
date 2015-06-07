@@ -14,6 +14,7 @@ namespace MvcUI.Models
 
         public string UserId { get; set; }
 
+        public string Description { get; set; }
         public DateTime Start { get; set; }
         public TimeSpan Time { get; set; }
 

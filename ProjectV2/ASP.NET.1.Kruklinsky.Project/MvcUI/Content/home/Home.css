@@ -99,14 +99,12 @@ Div#user-info-additional {
 DIV#Results {
     width: 420px;
     float: right;
-    background-color:black;
 }
 
 DIV#Messages {
     margin-top: 10px;
 
 }
-
 
 
 DIV.PageLinks {
@@ -133,13 +131,14 @@ Div.Message {
     padding: 10px;
 }
     Div.Message Div.SenderIcon {
-        float:left;
+      display:inline-block;
     }
     Div.Message Div.Time {
-        margin-left: 80px;
+      font-size: 70%;
+           
     }
     Div.Message Div.Text {
-        margin-left: 80px;
+          display:inline-block;
         text-align: justify;
     }
 
@@ -148,4 +147,70 @@ Div.Message {
     padding: 10px;
     display: inline-block;
     font-size: 75%;
+}
+
+
+#wrap{
+		display: none;
+		opacity: 0.8;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 16px;
+		background-color: rgba(1, 1, 1, 0.725);
+		z-index: 100;
+		overflow: auto;
+	}
+#window{
+		width: 50%;
+		height: 65%;
+		margin: 50px auto;
+		display: none;
+		background: #fff;
+		z-index: 200;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 16px;
+	}
+.close{
+		margin-left: 364px;
+		margin-top: 4px;
+		cursor: pointer;
+	}
+
+
+.imgareaselect-border1 {
+	background: url(border-v.gif) repeat-y left top;
+}
+.imgareaselect-border2 {
+    background: url(border-h.gif) repeat-x left top;
+}
+.imgareaselect-border3 {
+    background: url(border-v.gif) repeat-y right top;
+}
+.imgareaselect-border4 {
+    background: url(border-h.gif) repeat-x left bottom;
+}
+.imgareaselect-border1, .imgareaselect-border2,
+.imgareaselect-border3, .imgareaselect-border4 {
+    filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+.imgareaselect-handle {
+    background-color: #fff;
+    border: solid 1px #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+.imgareaselect-outer {
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+.imgareaselect-selection {  
 }

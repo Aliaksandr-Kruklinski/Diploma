@@ -18,6 +18,8 @@ namespace DAL.Interface.Entities
 
         public TimeSpan Time { get; set; }
 
+        public string Description { get; set; }
+
         public Lazy<IEnumerable<UserAnswer>> Answers { get; set; }
     }
 }

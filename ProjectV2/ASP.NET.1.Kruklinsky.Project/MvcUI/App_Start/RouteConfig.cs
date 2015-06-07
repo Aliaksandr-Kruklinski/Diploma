@@ -18,6 +18,7 @@ namespace MvcUI
             RegisterAdminRoutes(routes);
 
             RegisterGuestRoutes(routes);
+            //RegisterMessageRoutes(routes);
 
             routes.MapRoute(
                 name: "Default",
@@ -55,6 +56,11 @@ namespace MvcUI
         private static void RegisterGuestRoutes (RouteCollection routes)
         {
             routes.MapRoute(null, "Guest/{userId}", new { controller = "Guest", action = "Index" });
+        }
+
+        private static void RegisterMessageRoutes(RouteCollection routes)
+        {
+            routes.MapRoute(null, "Message/Dilog/{id}", new { controller = "Message", action = "Dilog" });
         }
     }
 }

@@ -143,9 +143,12 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\FriendController.cs" />
     <Compile Include="Controllers\GuestController.cs" />
+    <Compile Include="Controllers\HelperController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\OptionsController.cs" />
+    <Compile Include="Controllers\PublicController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\VerifyController.cs" />
@@ -167,6 +170,7 @@
     <Compile Include="Model binders\TestingModelBinder.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\AdminModel.cs" />
+    <Compile Include="Models\Enumerable.cs" />
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Models\Knowledge\Answer.cs" />
@@ -180,6 +184,7 @@
     <Compile Include="Models\Mapping\WallMap.cs" />
     <Compile Include="Models\Membership\Profile.cs" />
     <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\Message\MessageModel.cs" />
     <Compile Include="Models\Results.cs" />
     <Compile Include="Models\Test\Result.cs" />
     <Compile Include="Models\Test\UserAnswer.cs" />
@@ -214,6 +219,7 @@
     <Content Include="Content\error\Error.css" />
     <Content Include="Content\error\images\background.jpg" />
     <Content Include="Content\home\Home.css" />
+    <Content Include="Content\home\Home.js" />
     <Content Include="Content\home\images\background.jpg" />
     <Content Include="Content\login\images\background.jpg" />
     <Content Include="Content\login\login.css" />
@@ -340,6 +346,12 @@
     <Content Include="Views\Friend\Index.cshtml" />
     <Content Include="Views\Home\Private.cshtml" />
     <Content Include="Views\Wall\PrivateList.cshtml" />
+    <Content Include="Views\Public\Index.cshtml" />
+    <Content Include="Views\Message\Dialog.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Helper\Index.cshtml" />
+    <Content Include="Views\Result\IndexAdmin.cshtml" />
+    <Content Include="Views\Result\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Log files\" />

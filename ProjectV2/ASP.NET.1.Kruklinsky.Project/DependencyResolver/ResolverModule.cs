@@ -25,6 +25,7 @@ namespace DependencyResolver
             Bind<ITestRepository>().To<TestRepository>();
             Bind<IResultRepository>().To<ResultRepository>();
             Bind<IWallRepository>().To<WallRepository>();
+            Bind<IMessageRepository>().To<MessageRepository>();
             #endregion
             #region Services
             #region Membership
@@ -65,8 +66,13 @@ namespace DependencyResolver
             Bind<IResultQueryService>().To<ResultQueryService>();
             Bind<ITestingService>().To<TestingService>();
             #endregion
+            #region Wall
             Bind<IWallService>().To<WallService>();
             Bind<IImageService>().To<ImageService>();
+            #endregion
+            #region Message
+            Bind<IMessageService>().To<MessageService>();
+            #endregion
             #endregion
         }
     }

@@ -34,6 +34,9 @@
                     <a class="birthday">@Model.Profile.Birthday.Value.ToString("dd.MM.yyyy")</a>
                 }
             </div>
+            <div id="user-info-actions">
+                <a href="@Url.Action("AddDialog", "Message", new { userId = @Model.UserId })">Послать сообщение</a>
+            </div>
         </div>
     </div>
     <div id="Messages">

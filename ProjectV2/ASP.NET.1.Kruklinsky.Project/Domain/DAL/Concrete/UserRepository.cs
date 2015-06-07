@@ -270,5 +270,31 @@ namespace DAL.Concrete
                 Id = item.UserId.ToString(),
             };
         }
+
+
+        public Dialog GetUserDilog(string userId, int dialogId)
+        {
+            Dialog result = null;
+            var user = this.GetOrmUser(new Guid(userId));
+            var query = user.Dialogs.Where(d => d.DialogId == dialogId);
+            if(query.Count() != 0)
+            {
+                result = query.First().ToDal(userId);
+            }
+            return result;
+        }
+
+
+        public IEnumerable<Dialog> GetUserDilogs(string userId)
+        {
+            List<Dialog> result = new List<Dialog>();
+            var user = this.GetOrmUser(new Guid(userId));
+            var query = user.Dialogs;
+            if (query.Count() != 0)
+            {
+                result = query.Select(d => d.ToDal(userId)).ToList();
+            }
+            return result;
+        }
     }
 }

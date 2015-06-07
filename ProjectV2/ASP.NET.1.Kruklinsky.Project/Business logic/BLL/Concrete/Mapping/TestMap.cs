@@ -17,7 +17,8 @@ namespace BLL.Concrete
                 TestId = item.TestId,
                 UserId = item.UserId,
                 Start = item.Start,
-                Time = item.Time
+                Time = item.Time,
+                Description = item.Description
             };
         }
         public static DAL.Interface.Entities.Result ToDal(this Result item, IEnumerable<UserAnswer> answers)
@@ -41,6 +42,7 @@ namespace BLL.Concrete
                 UserId = item.UserId,
                 Start = item.Start,
                 Time = item.Time,
+                Description = item.Description,
                 Answers = item.Answers == null ? new List<UserAnswer>() : item.Answers.Value.Select(a => a.ToBll()).ToList()
             };
         }

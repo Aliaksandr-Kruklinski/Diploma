@@ -12,5 +12,7 @@ namespace BLL.Interface.Abstract
         int StartTest(string userId, int testId, int duration);
         TimeSpan TimeLeft(int resultId);
         void FinishTest(int resultId, IEnumerable<UserAnswer> answers);
+
+        void SetResultDescription(int resultId, string description);
     }
 }

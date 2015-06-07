@@ -62,5 +62,38 @@ namespace BLL.Concrete
         }
 
         #endregion
+
+
+        public Dialog GetUserDilog(string userId, int dialogId)
+        {
+            Dialog result = null;
+            using (var context = dbContextScopeFactory.CreateReadOnly())
+            {
+                result = this.repository.GetUserDilog(userId,dialogId).ToBll();
+            }
+            return result;
+        }
+
+
+        public IEnumerable<Dialog> GetUserDilogs(string userId)
+        {
+            List<Dialog> result = new List<Dialog>();
+            using (var context = dbContextScopeFactory.CreateReadOnly())
+            {
+                var pResult = this.repository.GetUserDilogs(userId).Select(d => d.ToBll()).ToList();
+                foreach(var item in pResult)
+                {
+                    List<User> users = new List<User>();
+                    foreach(var user in item.Users)
+                    {
+                        var validUser = this.GetUser(user.Id);
+
+                        users.Add( new User { Id = validUser.Id, Profile = validUser.Profile});
+                    }
+                    result.Add(new Dialog { Id = item.Id, Users = users});
+                }
+            }
+            return result;
+        }
     }
 }

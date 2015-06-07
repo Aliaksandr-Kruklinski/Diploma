@@ -20,7 +20,9 @@ namespace MvcUI
 
             bundles.Add(new ScriptBundle("~/Content/admin/js").Include("~/Content/admin/admin.js"));
 
+
             bundles.Add(new ScriptBundle("~/Content/home/js").Include("~/Content/stopwatch.js"));
+            bundles.Add(new ScriptBundle("~/Content/home/js").Include("~/Content/home/Home.js"));
             
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

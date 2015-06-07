@@ -21,6 +21,8 @@ namespace ORM.Model
         public DateTime Start { get; set; }
         public TimeSpan Time { get; set; }
 
+        public string Description { get; set; }
+
 
         [ForeignKey("TestId")]
         public virtual Test Test { get; set; }

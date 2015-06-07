@@ -84,5 +84,15 @@ namespace BLL.Concrete
         }
 
         #endregion
+
+
+        public void SetResultDescription(int resultId, string description)
+        {
+            using (var context = dbContextScopeFactory.Create())
+            {
+                this.repository.SetResultDescription(resultId, description);
+                context.SaveChanges();
+            }
+        }
     }
 }

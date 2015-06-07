@@ -42,6 +42,7 @@
     <Compile Include="Abstract\Answers services\IAnswersQueryService.cs" />
     <Compile Include="Abstract\Answers services\IQuestionAnswersManagmentService.cs" />
     <Compile Include="Abstract\Image services\IImageService.cs" />
+    <Compile Include="Abstract\Message services\IMessageService.cs" />
     <Compile Include="Abstract\Question services\IQuestionCreationService.cs" />
     <Compile Include="Abstract\Question services\IQuestionQueryService.cs" />
     <Compile Include="Abstract\Result services\IResultQueryService.cs" />
@@ -67,6 +68,8 @@
     <Compile Include="Entities\Membership\Profile.cs" />
     <Compile Include="Entities\Membership\Role.cs" />
     <Compile Include="Entities\Membership\User.cs" />
+    <Compile Include="Entities\Message\Dialog.cs" />
+    <Compile Include="Entities\Message\Message.cs" />
     <Compile Include="Entities\Test\Result.cs" />
     <Compile Include="Entities\Knowledge\Test.cs" />
     <Compile Include="Entities\Test\UserAnswer.cs" />

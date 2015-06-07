@@ -23,5 +23,9 @@ namespace DAL.Interface.Abstract
         int LoadImage(string id, Image image);
 
         IEnumerable<User> GetAllUsers();
+
+        Dialog GetUserDilog(string userId, int dialogId);
+
+        IEnumerable<Dialog> GetUserDilogs(string userId);
     }
 }

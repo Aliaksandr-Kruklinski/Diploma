@@ -97,7 +97,8 @@ namespace MvcUI.Models
                 SubjectId = item.SubjectId,
                 Topic = item.Topic,
                 Name = item.Name,
-                Description = item.Description
+                Description = item.Description,
+                 
             };
         }
         public static BLL.Interface.Entities.Test ToBll(this Test item)

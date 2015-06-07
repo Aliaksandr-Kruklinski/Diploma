@@ -65,6 +65,5 @@ namespace MvcUI.Controllers
                 return RedirectToAction("Index", "Guest", new { userId = model.UserId, page = 1 });
             }
         }
-
     }
 }

@@ -16,5 +16,7 @@ namespace DAL.Interface.Abstract
         void AddUserAnswer(int resultId, UserAnswer answer);
 
         IEnumerable<Result> GetUserResults(string userId);
+
+        void SetResultDescription(int resultId, string description);
     }
 }

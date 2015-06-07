@@ -12,5 +12,8 @@ namespace BLL.Interface.Abstract
         User GetUser(string id);
         User GetUserByEmail(string email);
         IEnumerable<User> GetAllUsers();
+
+        Dialog GetUserDilog(string userId, int dialogId);
+        IEnumerable<Dialog> GetUserDilogs(string userId);
     }
 }

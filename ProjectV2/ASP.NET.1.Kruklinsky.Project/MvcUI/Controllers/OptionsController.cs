@@ -37,7 +37,7 @@ namespace MvcUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Models.Membership.Profile model, HttpPostedFileBase image)
+        public ActionResult Index(Models.Membership.Profile model, HttpPostedFileBase image, string x1, string y1, string x2, string y2)
         {
             try
             {

@@ -14,19 +14,21 @@
     ViewBag.Title = "Test";
 }
 
-<div class="stroke">
-    @foreach (var subject in Model)
-    {
-        <div class="subject">
-            @Html.HideImage(subject.Subject.Id)
-            <label>@subject.Subject.Name</label>
-            <div id="@subject.Subject.Id">
-                @foreach (var test in subject.Tests)
-                {
-                    @Html.ActionLink(test.Name, "Test", "Test", new { testId = test.Id }, null)
-                    <br />
-                }
+<div>
+    <div class="stroke">
+        @foreach (var subject in Model)
+        {
+            <div class="subject">
+                @Html.HideImage(subject.Subject.Id)
+                <label>@subject.Subject.Name</label>
+                <div id="@subject.Subject.Id">
+                    @foreach (var test in subject.Tests)
+                    {
+                        @Html.ActionLink(test.Name, "Test", "Test", new { testId = test.Id }, null)
+                        <br />
+                    }
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>

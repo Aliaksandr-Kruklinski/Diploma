@@ -31,12 +31,11 @@
         <div class="SenderIcon">
             <img class="Avatar" style="width:75px; height:75px " src="@Url.Action("GetAvatar", "Wall", new { userID =@m.UserId })" />
         </div>
+        <div class="Text">@m.Text</div>
         <div class="Time">
             <div class="SendDay">@m.Time.ToString("dd.MM.yy")</div>
             <div class="SendTime">@m.Time.ToString("HH:mm:ss")</div>
         </div>
-        <div class="SenderName"></div>
-        <div class="Text">@m.Text</div>
         <div style="text-align:right">
             <a style="text-decoration: none; color: black; cursor:pointer;" onclick="publishMessage(this)">Опуиликовать</a>
         </div>

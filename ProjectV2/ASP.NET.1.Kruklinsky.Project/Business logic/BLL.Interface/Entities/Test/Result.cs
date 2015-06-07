@@ -17,6 +17,8 @@ namespace BLL.Interface.Entities
         public DateTime Start { get; set; }
         public TimeSpan Time { get; set; }
 
+        public string Description { get; set; }
+
 
         public IEnumerable<UserAnswer> Answers { get; set; }
     }

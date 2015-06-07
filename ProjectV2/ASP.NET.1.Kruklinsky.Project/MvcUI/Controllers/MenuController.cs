@@ -16,7 +16,8 @@ namespace MvcUI.Controllers
             linksInfo.Add(new LinkInfo { LinkText = "Стена", ControllerName = "Home", ActionName = "Index" });
             linksInfo.Add(new LinkInfo { LinkText = "Дневник", ControllerName = "Home", ActionName = "Private" });
             linksInfo.Add(new LinkInfo { LinkText = "Друзья", ControllerName = "Friend", ActionName = "Index" });
-            linksInfo.Add(new LinkInfo { LinkText = "Сообщения", ControllerName = "Dialog", ActionName = "Index" });
+            linksInfo.Add(new LinkInfo { LinkText = "Психологи", ControllerName = "Helper", ActionName = "Index" });
+            linksInfo.Add(new LinkInfo { LinkText = "Сообщения", ControllerName = "Message", ActionName = "Index" });
             linksInfo.Add(new LinkInfo { LinkText = "Настройки", ControllerName = "Options", ActionName = "Index" });
             viewModel.SelectedLink = selectedLink;
             viewModel.LinksInfo = linksInfo;

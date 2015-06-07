@@ -6,6 +6,13 @@ using System.Web;
 namespace MvcUI.Models
 {
 
+    public class MessagePagingModel
+    {
+        public IEnumerable<BLL.Interface.Entities.Message> Messages { get; set; }
+        public Paginglnfo Paginglnfo { get; set; }
+        public int DilogId { get; set; }
+    }
+
     public class WallMessagePagingModel
     {
         public IEnumerable<WallMessage> WallMessages { get; set; }

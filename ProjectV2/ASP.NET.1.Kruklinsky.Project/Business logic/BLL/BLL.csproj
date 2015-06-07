@@ -48,8 +48,10 @@
     <Compile Include="Concrete\Exceptions helpers\UserExceptionsHelper.cs" />
     <Compile Include="Concrete\Mapping\KnowledgeMap.cs" />
     <Compile Include="Concrete\Mapping\MembershipMap.cs" />
+    <Compile Include="Concrete\Mapping\MessageMap.cs" />
     <Compile Include="Concrete\Mapping\TestMap.cs" />
     <Compile Include="Concrete\Mapping\WallMap.cs" />
+    <Compile Include="Concrete\Services\Message repository services\MessageService.cs" />
     <Compile Include="Concrete\Services\Question repository services\Answers services\AnswersQueryService.cs" />
     <Compile Include="Concrete\Services\Question repository services\Answers services\QuestionAnswersManagmentService.cs" />
     <Compile Include="Concrete\Services\Question repository services\Question services\QuestionCreationService.cs" />

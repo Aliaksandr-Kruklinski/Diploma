@@ -156,5 +156,15 @@ namespace DAL.Concrete
         }
 
         #endregion
+
+        public void SetResultDescription(int resultId, string description)
+        {
+            var result = this.GetOrmResult(resultId);
+            if (result != null)
+            {
+                result.Description = description;
+                this.context.SaveChanges();
+            }
+        }
     }
 }
