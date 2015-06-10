@@ -22,29 +22,29 @@ namespace MvcUI.Controllers
         private IUserQueryService userQueryService;
 
 
-        //public TestController(ISubjectQueryService subjectQueryService, ITestingService testingService, ITestQueryService testQueryService, ITestSessionFactory testSessionFactory)
-        //{
-        //    if (subjectQueryService == null)
-        //    {
-        //        throw new System.ArgumentNullException("subjectQueryService", "Subject auery service is null.");
-        //    }
-        //    if (testingService == null)
-        //    {
-        //        throw new System.ArgumentNullException("testService", "Test service is null.");
-        //    }
-        //    if (testQueryService == null)
-        //    {
-        //        throw new System.ArgumentNullException("testQueryService", "Test query service is null.");
-        //    }
-        //    if (testSessionFactory == null)
-        //    {
-        //        throw new System.ArgumentNullException("testSessionFactory", "Test session factory is null.");
-        //    }
-        //    this.testQueryService = testQueryService;
-        //    this.subjectQueryService = subjectQueryService;
-        //    this.testingService = testingService;
-        //    this.testSessionFactory = testSessionFactory;
-        //}
+        public TestController(ISubjectQueryService subjectQueryService, ITestingService testingService, ITestQueryService testQueryService, ITestSessionFactory testSessionFactory)
+        {
+            if (subjectQueryService == null)
+            {
+                throw new System.ArgumentNullException("subjectQueryService", "Subject auery service is null.");
+            }
+            if (testingService == null)
+            {
+                throw new System.ArgumentNullException("testService", "Test service is null.");
+            }
+            if (testQueryService == null)
+            {
+                throw new System.ArgumentNullException("testQueryService", "Test query service is null.");
+            }
+            if (testSessionFactory == null)
+            {
+                throw new System.ArgumentNullException("testSessionFactory", "Test session factory is null.");
+            }
+            this.testQueryService = testQueryService;
+            this.subjectQueryService = subjectQueryService;
+            this.testingService = testingService;
+            this.testSessionFactory = testSessionFactory;
+        }
 
         public TestController(ISubjectQueryService subjectQueryService, ITestingService testingService, ITestQueryService testQueryService, ITestSessionFactory testSessionFactory, IMessageService messageService, IUserQueryService userQueryService)
         {

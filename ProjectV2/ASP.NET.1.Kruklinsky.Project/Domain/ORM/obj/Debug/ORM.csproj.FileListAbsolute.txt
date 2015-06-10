@@ -32,3 +32,4 @@ C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Proje
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\ORM\obj\Debug\ORM.Migrations.InitialCreate.resources
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\ORM\obj\Debug\ORM.csproj.GenerateResource.Cache
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\ORM\obj\Debug\ORM.Migrations.Bbb.resources
+C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\ORM\obj\Debug\ORM.csprojResolveAssemblyReference.cache

@@ -19,3 +19,4 @@ C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Proje
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\DAL.Interface\bin\Debug\DAL.Interface.pdb
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\DAL.Interface\obj\Debug\DAL.Interface.dll
 C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\DAL.Interface\obj\Debug\DAL.Interface.pdb
+C:\Users\Александр\Desktop\Diploma\ProjectV2\ASP.NET.1.Kruklinsky.Project\Domain\DAL.Interface\obj\Debug\DAL.Interface.csprojResolveAssemblyReference.cache
