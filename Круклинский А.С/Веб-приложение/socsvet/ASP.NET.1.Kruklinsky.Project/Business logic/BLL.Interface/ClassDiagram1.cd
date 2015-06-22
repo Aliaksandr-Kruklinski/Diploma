@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="BLL.Interface.Entities.User">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAAAAgAAABQCABAhAAAAAAA=</HashCode>
+      <FileName>Entities\Membership\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Role">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Membership\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Profile">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAEgAAAAAAAAAAAQAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Membership\Profile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Image">
+    <Position X="5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAQAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Wall">
+    <Position X="2.75" Y="1.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\Wall\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.WallMessage">
+    <Position X="7.5" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAIQA=</HashCode>
+      <FileName>Entities\Wall\WallMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.WallComment">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAACAAAAQA=</HashCode>
+      <FileName>Entities\Wall\WallComment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Dialog">
+    <Position X="1" Y="1" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Entities\Message\Dialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Message">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACAAAAQA=</HashCode>
+      <FileName>Entities\Message\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Subject">
+    <Position X="1.5" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Knowledge\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Test">
+    <Position X="1.75" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAEAAgAAAAAAAAAAQAAAAAAAAEAAAAACAAAAA=</HashCode>
+      <FileName>Entities\Knowledge\Test.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Question">
+    <Position X="1.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAIAAEAAgAAAAAAIAAAAAAAAAAAABQAAACCAAAAA=</HashCode>
+      <FileName>Entities\Knowledge\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.Result">
+    <Position X="2" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAgAAAAAAAEAAgAAAAAAAAAQAAAAAAAAQA=</HashCode>
+      <FileName>Entities\Test\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Interface.Entities.UserAnswer">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAA=</HashCode>
+      <FileName>Entities\Test\UserAnswer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

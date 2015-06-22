@@ -1,0 +1,15 @@
+﻿@model MvcUI.Models.Test
+
+@{
+    Layout = null;
+}
+
+<div class="stroke">
+    @using (Html.BeginForm("AddTest", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label>Добавить тест</label>
+        @Html.EditorForModel();
+        <br />
+        <input class="btn btn-inverse" type="submit" value="Добавить" />
+    }
+</div>
